@@ -3,6 +3,9 @@
         <title>
             Roman Era Revision & Quiz
         </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" type="text/css"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}" type="text/css"/>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}" type="text/css"/>
     </head>
     <body>
         <nav>
@@ -21,5 +24,12 @@
         
     {%block content%}
     {%endblock%}
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
     </body>
 </html>
