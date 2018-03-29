@@ -1,3 +1,24 @@
+/**Main font used throughout the project**/
+
 .theFont{
     font-family: 'Playfair Display', serif;
+}
+/**container on the main page surrounding the username entering panel**/
+.containerStyle{
+    background-color:#CCAEAE;
+}
+
+.padd{
+    padding: 20px;
+}
+
+.borderForce{
+    border: 15px;
+    border-style:solid;
+}
+
+.linkButtons{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color:#3cb371;
 }

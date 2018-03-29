@@ -12,14 +12,13 @@ def write_to_file(filename, data):
 
 @app.route('/', methods=["GET", "POST"])
 def index():
-    """Landing Page for users"""""
+    """Home Page for users"""
     if request.method == "POST":
         with open("data/users.txt", "a") as user_list:
                 user_list.write(request.form["username"] + "\n")
                 return redirect("quiz")
     return render_template("index.html", page_title="Home page")
     
-
 
 @app.route('/quiz')
 def quiz():

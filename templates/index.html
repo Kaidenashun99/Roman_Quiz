@@ -7,7 +7,7 @@
        </div>
    </div> 
    <div class="row">
-       <div class="col-sm-12 theFont">
+       <div class="col-sm-12 theFont text-center">
            <p>We offer a free learning resource for students, kids and anyone who wants to learn about the Roman Era.
            Through the use of our revision material and quiz features you are able to learn what life was like in this tremendous era.
            For best results learn some information in our revision section first and then embark on our quiz!</p>
@@ -19,15 +19,20 @@
            <!--Empty for styling purposes-->
        </div>
        <div class="col-md-10 col-sm-12">
-           <div class="conatiner">
+           <div class="conatiner containerStyle borderForce">
                <div class="row">
+                   <div class="col-sm-12">
+                       <p class="theFont text-center" id="usernameIntro">In order to take the quiz and feature in our infamous leaderboard, please chose a username!</p>
+                   </div>
+               </div>
+               <div class="row padd">
                    <div class="col-sm-6">
-                       <label for="username">Username:</label>
+                       <label for="username"><h2 class="theFont">Enter your username:</h2></label>
                    </div>
                    <div class="col-sm-6">
                        <form method="POST">
                            <input type="text" name="username" id="username">
-                           <button>Submit</button>
+                           <input class="btn btn-primary" type="submit" value="Submit">
                        </form>
                    </div>
                </div>
@@ -37,6 +42,21 @@
            <!--Empty for styling purposes-->
        </div>
    </div>
+   <div class="row padd">
+        <div class="col-md-4 col-sm-12 linkButtons">
+            <p class="text-center theFont">Take the Quiz</p>
+        </div>
+        
+       <div class="col-md-4 col-sm-12 linkButtons">
+           <p class="text-center theFont">Leaderboard</p>
+       </div>
+    
+       <div class="col-md-4 col-sm-12 linkButtons">
+           <p class="text-center theFont">Revise</p>
+       </div>
+   </div>
+   
+   
 </div>
 
 
