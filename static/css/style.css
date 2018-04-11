@@ -20,5 +20,11 @@
 .linkButtons{
     border: 2px solid black;
     border-radius: 5px;
-    background-color:#3cb371;
+    background-color:#C0C0C0;
+    background-clip: padding-box;
+    border: 10px solid transparent;
+}
+
+a:hover{
+    color:red;
 }

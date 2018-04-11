@@ -1,7 +1,12 @@
 import os
-from flask import Flask, redirect, render_template, request
+from flask import Flask, redirect, render_template, request, flash
+import json
+from quiz import get_question
 
 app = Flask(__name__)
+app.secret_key = 'some secret'
+
+
 
 """ Writes data to selected file """ 
 def write_to_file(filename, data):
@@ -14,15 +19,16 @@ def write_to_file(filename, data):
 def index():
     """Home Page for users"""
     if request.method == "POST":
-        with open("data/users.txt", "a") as user_list:
-                user_list.write(request.form["username"] + "\n")
-                return redirect("quiz")
+            flash("Thanks, you selected {} as your username".format(request.form["username"]))
     return render_template("index.html", page_title="Home page")
     
 
-@app.route('/quiz')
+@app.route('/quiz', methods=["GET", "POST"])
 def quiz():
-    return render_template("quiz.html")
+    return render_template("quiz.html", page_title="Quiz")
+    
+    
+   
     
     
 app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug = True)

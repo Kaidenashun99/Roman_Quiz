@@ -43,8 +43,18 @@
        </div>
    </div>
    <div class="row padd">
+       {% with messages = get_flashed_messages() %}
+           {% for message in messages %}
+                <h3 class="theFont text-center">{{ message }}</h3>
+            {% endfor %}
+           
+        {% endwith %}
+   </div>
+   <div class="row padd">
         <div class="col-md-4 col-sm-12 linkButtons">
+            <a href="quiz">
             <p class="text-center theFont">Take the Quiz</p>
+            </a>
         </div>
         
        <div class="col-md-4 col-sm-12 linkButtons">
