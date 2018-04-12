@@ -35,10 +35,27 @@ def ask_questions():
             questions.append(text)
         else:
             answers.append(text)
+   
+    number_of_questions = len(questions)
+    questions_and_answers = zip(questions, answers)
     
-    for question, answer in zip(questions, answers):
+    score = 0
+    
+    for question, answer in questions_and_answers:
         guess = input(question + "> ")
+        if guess == answer:
+            score += 1
+            print("Correct!")
+            print("Your current score:")
+            print(score)
+        else:
+            print("Inccorect!")
+            print("The correct answer is as follows:")
+            print(answer)
+            print("Your current score:")
+            print(score)
         
+    print("You got {0} correct out of a possible {1}.".format(score, number_of_questions))
 
 
 def quiz_loop():
@@ -55,7 +72,6 @@ def quiz_loop():
         else:
             print("Invalid option, please select one of the above...")
         print("")
-
 
 
 quiz_loop()
