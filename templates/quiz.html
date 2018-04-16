@@ -2,12 +2,13 @@
 {%block content%}
 <div class="container">
     <div class="row">
-        
-    </div>
-    <div class="row">
-        <h2>{{question}}</h2>
+        <h1 class="text-center theFont">Welcome to the quiz section!</h1>
     </div>
     <!--ANSWERS LAYOUT-->
+    {% for data in quiz_data %}
+    <div class="row">
+        <h3 class="theFont">{{quiz_data.question1}}</h3>
+    </div>
     <div class="row">
         <div class="col-md-1 hidden-sm">
             <!--styling purposes-->
@@ -45,6 +46,7 @@
             <!--Styling purposes-->
         </div>
     </div>
+    {%endfor%}
     <!--End Layout-->
     <!--Answer Section-->
     <div class="row">
@@ -58,11 +60,6 @@
                 <input type="text" name="answer1" id="answer1">
                 <input class="btn btn-primary" type="submit" value="Submit">
             </form>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <p>Congratulations, you got {{player_score}} out of 1!</p>
         </div>
     </div>
 {%endblock%}

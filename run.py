@@ -1,7 +1,7 @@
 import os
 from flask import Flask, redirect, render_template, request, flash
 import json
-from quiz import get_question
+
 
 app = Flask(__name__)
 app.secret_key = 'some secret'
@@ -25,8 +25,9 @@ def index():
 
 @app.route('/quiz', methods=["GET", "POST"])
 def quiz():
-    return render_template("quiz.html", page_title="Quiz")
-    
+    with open('data/questions.json') as json_data:
+        data = json.load(json_data)
+    return render_template("quiz.html", page_title="Quiz", quiz_data=data)
     
    
     

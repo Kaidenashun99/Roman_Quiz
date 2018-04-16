@@ -1,16 +1,14 @@
-{
-    "question0": {
-        "options": {
-            "a": "Answer A",
-            "b": "Answer B",
-        },
-        "answer": "b",
-    },
-    "question1" : "What was the Romans favourite method of execution?",
-    "answer1a":"A.Beheading",
-    "answer1b" : "B.Stinging to death",
-    "answer1c" : "C.Rabid mice set onto the victim",
-    "answer1d" : "D.Lethal Injection",
-    "question2" : "At what age did wealthy Roman children start school?",
-    "answers2":"['a.5', 'b.7', 'c.10', 'd.12']"
-}
+[
+   {
+   "question1" : "What was the Romans favourite method of execution?",
+   "answer1a" : "Beheading",
+   "answer1b" : "Stinging to death",
+   "answer1c" : "Hanging",
+   "answer1d" : "Lethal Injection",
+   "question2" : "At what age did wealthy Roman children begin school?",
+   "answer2a" : "7",
+   "answer2b" : "5",
+   "answer2c" : "3",
+   "answer2d" : "12"
+   }
+]
