@@ -1,26 +1,24 @@
 {%extends 'base.html'%}
 {%block content%}
+{% for data in quiz_data %}
 <div class="container">
+    <form method="POST" class="text-center" name="quiz_answer">
     <div class="row">
-        <h1 class="text-center theFont">Welcome to the quiz section!</h1>
+        <h2 class="text-center theFont">{{data.question["question"]}}</h2>
     </div>
     <!--ANSWERS LAYOUT-->
-    {% for data in quiz_data %}
-    <div class="row">
-        <h3 class="theFont">{{quiz_data.question1}}</h3>
-    </div>
     <div class="row">
         <div class="col-md-1 hidden-sm">
             <!--styling purposes-->
         </div>
         <div class="col-md-4 col-sm-12 option1A">
-                <p class="theFont"></p>
+            <input type="radio" name="quiz_answer" value="answer1">{{data.question['answer1']}}
         </div>
         <div class="col-md-2 hidden-sm">
             <!--Styling purposes-->
         </div>
         <div class="col-md-4 col-sm-12 option1B">
-            <p class="theFont"></p>
+            <input type="radio" name="quiz_answer" value="answer2">{{data.question["answer2"]}}
         </div>
         <div class="col-md-1 hidden-sm">
             <!--Styling purposes-->
@@ -34,13 +32,13 @@
             <!--styling purposes-->
         </div>
         <div class="col-md-4 col-sm-12 option1A">
-                <p class="theFont"></p>
+            <input type="radio" name="quiz_answer" value="answer3">{{data.question["answer3"]}}
         </div>
         <div class="col-md-2 hidden-sm">
             <!--Styling purposes-->
         </div>
         <div class="col-md-4 col-sm-12 option1B">
-            <p class="theFont"></p>
+            <input type="radio" name="quiz_answer" value="answer4">{{data.question["answer4"]}}
         </div>
         <div class="col-md-1 hidden-sm">
             <!--Styling purposes-->
@@ -51,15 +49,8 @@
     <!--Answer Section-->
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="theFont text-center">Please enter your chosen answer in the text field below...</h3>
-        </div>
-    </div>->
-    <div class="row">
-        <div class="col-sm-12">
-            <form method="POST" class="text-center">
-                <input type="text" name="answer1" id="answer1">
                 <input class="btn btn-primary" type="submit" value="Submit">
-            </form>
         </div>
     </div>
+</form>
 {%endblock%}
