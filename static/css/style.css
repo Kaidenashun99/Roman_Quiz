@@ -1,7 +1,10 @@
-/**Main font used throughout the project**/
+/**Main fonts used throughout the project**/
 
 .theFont{
     font-family: 'Playfair Display', serif;
+}
+.answerFont{
+    font-family: 'Roboto', sans-serif;
 }
 /**container on the main page surrounding the username entering panel**/
 .containerStyle{

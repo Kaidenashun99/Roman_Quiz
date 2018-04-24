@@ -4,21 +4,21 @@
 <div class="container">
     <form method="POST" class="text-center" name="quiz_answer">
     <div class="row">
-        <h2 class="text-center theFont">{{data.question["question"]}}</h2>
+        <h2 class=" padd theFont">{{data.question}}</h2>
     </div>
     <!--ANSWERS LAYOUT-->
     <div class="row">
         <div class="col-md-1 hidden-sm">
             <!--styling purposes-->
         </div>
-        <div class="col-md-4 col-sm-12 option1A">
-            <input type="radio" name="quiz_answer" value="answer1">{{data.question['answer1']}}
+        <div class="col-md-4 col-sm-12 option1A padd">
+            <p class="answerFont">{{data.answer1}}</p>
         </div>
         <div class="col-md-2 hidden-sm">
             <!--Styling purposes-->
         </div>
-        <div class="col-md-4 col-sm-12 option1B">
-            <input type="radio" name="quiz_answer" value="answer2">{{data.question["answer2"]}}
+        <div class="col-md-4 col-sm-12 option1B padd">
+            <p class="answerFont">{{data.answer2}}</p>
         </div>
         <div class="col-md-1 hidden-sm">
             <!--Styling purposes-->
@@ -31,19 +31,37 @@
         <div class="col-md-1 hidden-sm">
             <!--styling purposes-->
         </div>
-        <div class="col-md-4 col-sm-12 option1A">
-            <input type="radio" name="quiz_answer" value="answer3">{{data.question["answer3"]}}
+        <div class="col-md-4 col-sm-12 option1A padd">
+            <p class="answerFont">{{data.answer3}}</p>
         </div>
         <div class="col-md-2 hidden-sm">
             <!--Styling purposes-->
         </div>
-        <div class="col-md-4 col-sm-12 option1B">
-            <input type="radio" name="quiz_answer" value="answer4">{{data.question["answer4"]}}
+        <div class="col-md-4 col-sm-12 option1B padd">
+            <p class="answerFont">{{data.answer4}}</p>
         </div>
         <div class="col-md-1 hidden-sm">
             <!--Styling purposes-->
         </div>
     </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <!--Empty for styling purposes-->
+            </div>
+            <div class="col-sm-4">
+                <h4 class="theFont">Please select your answer:</h4>
+                <select name="answer">
+                    <option value="answer1">{{data.answer1}}</option>
+                    <option value="answer2">{{data.answer2}}</option>
+                    <option value="answer3">{{data.answer3}}</option>
+                    <option value="answer4">{{data.answer4}}</option>
+                 </select>
+            </div>
+            <div class="col-sm-4">
+                <!--Empty for styling purposes-->
+            </div>
+        </div>
+</div>
     {%endfor%}
     <!--End Layout-->
     <!--Answer Section-->

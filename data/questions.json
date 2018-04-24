@@ -1,8 +1,6 @@
 [
 
-    {
-
-        "question": {
+        {
 
             "question" : "What was the Romans favourite method of execution?",
 
@@ -16,7 +14,7 @@
 
         },
 
-        "question": {
+        {
 
             "question" : "At what age did wealthy Roman children begin school?",
 
@@ -30,7 +28,7 @@
 
         },
         
-        "question" : {
+        {
            
            "question" : "In what year did the Western Roman Empire come to an end?",
            
@@ -43,7 +41,7 @@
            "answer4" : "423 CE"
         },
         
-        "question" : {
+       {
            
            "question" : "Which of these did the Romans not employ in battle?",
            
@@ -56,7 +54,7 @@
            "answer4" : "Swords"
         },
         
-        "question" : {
+        {
            
            "question" : "Who was the legendary founder of Rome?",
            
@@ -69,7 +67,7 @@
            "answer4" : "Hannibal"
         },
         
-        "question" : {
+        {
            
            "question" : "When did Julius Caesar die?",
            
@@ -82,7 +80,7 @@
            "answer4" : "22 CE"
         },
         
-        "question" : {
+        {
            
            "question" : "The ancient City of Rome was built on how many hills?",
            
@@ -95,7 +93,7 @@
            "answer4" : "2"
         },
         
-        "question" : {
+        {
            
            "question" : "In ancient Roman cities, the market-place and meeting areas were known as?",
            
@@ -108,7 +106,7 @@
            "answer4" : "Forecourt"
         },
         
-        "question" : {
+        {
            
            "question" : "Which was the first Roman road – and where did it run?",
            
@@ -121,7 +119,7 @@
            "answer4" : "Via Flamania"
         },
         
-        "question" : {
+        {
            
            "question" : "Why was Julius called Caesar?",
            
@@ -134,7 +132,5 @@
            "answer4" : "Because he was born via Caesarean Section"
         }
         
-
-    }
 
 ]
