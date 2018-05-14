@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="col-sm-12 usernameContainer">
+    <h1 class="theFont">Welcome {{username}}, best of luck with the quiz!</h1>
+</div>
+<form method="POST" action="/results">
+    {% for data in quiz_data %}
+    <div class="col-sm-12">
+        <p class="theFont">{{data.question}}</p>
+    </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <!--Empty for styling purposes-->
+            </div>
+            <div class="col-sm-4">
+                <h4 class="theFont">Please select your answer:</h4>
+                <select name="question{{ loop.index }}">
+                    <option value="{{data.answer1}}">{{data.answer1}}</option>
+                    <option value="{{data.answer2}}">{{data.answer2}}</option>
+                    <option value="{{data.answer3}}">{{data.answer3}}</option>
+                    <option value="{{data.answer4}}">{{data.answer4}}</option>
+                 </select>
+            </div>
+            <div class="col-sm-4">
+                <!--Empty for styling purposes-->
+            </div>
+        </div>
+    {% endfor %}
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+{%endblock%}
