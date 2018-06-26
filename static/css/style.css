@@ -11,6 +11,20 @@
     background-color:#CCAEAE;
 }
 
+/*Styling for selectboxes throughout the quiz*/
+.mainSelection select{
+    color:blue;
+}
+
+#greenButton{
+    background-color:green;
+    border:3px solid black;
+}
+.orange{
+    background-color:orange;
+    border: 3px solid black;
+}
+
 .padd{
     padding: 20px;
 }
@@ -30,4 +44,39 @@
 
 a:hover{
     color:red;
+}
+
+.usernameContainer{
+    border:2px solid black;
+    background-color:#C0C0C0;
+}
+
+.linkButtons:hover{
+    color:red;
+}
+
+
+.redText{
+    color: red;
+}
+
+/*Styling for flashed messages on the top of question template*/
+.flashBox{
+    background-color:grey;
+    border-style: solid;
+    border-color: black;
+    border-radius: 3px;
+}
+
+/*Styling for table*/
+table, th, td {
+    border: 1px solid black;
+    width:100%;
+}
+th, td {
+    padding: 15px;
+    background-color:grey;
+}
+.userEntry{
+    background-color: lightgrey;
 }

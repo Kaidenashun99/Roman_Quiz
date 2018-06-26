@@ -1,0 +1,60 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<form method="POST">
+
+<!-- Flash messages depending on whether correct or incorrect answer was submitted-->
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {%for message in messages%}
+        <div class="flashBox">
+            <h1 class="theFont text-center padd">{{message}}</h1>
+        </div>
+        {%endfor%}
+    {%endif%}
+{%endwith%}
+
+
+<!--Question Layout-->    
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class='theFont text-center'>{{ context.question}}</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 offset-sm-3 padd">
+        <h2 class="theFont text-center">Please select your answer:</h2>
+    </div>
+</div>
+<span class="row padd">
+    <div class="col-sm-12 text-center mainSelection">
+         <select name="submitted_answer" class="center-block">
+                    <option value="{{context.answer}}">{{context.answer}}</option>
+                    <option value="{{context.decoy_answer_1}}">{{context.decoy_answer_1}}</option>
+                    <option value="{{context.decoy_answer_2}}">{{context.decoy_answer_2}}</option>
+                    <option value="{{context.decoy_answer_3}}">{{context.decoy_answer_3}}</option>
+         </select>
+    </div>
+</span>
+
+<!--Real time update of user's current attempt and score counters-->
+<span class="row">
+    <div class="col-md-6 col-sm-12">
+        <p class="theFont text-center">Attempt: {{context.attempt}}</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <p class="theFont text-center">Score: {{context.current_score}}</p>
+    </div>
+</span>
+
+<!--Hidden inputs that sends the users current score, attempt and question index to the system-->
+<input type="hidden" name="current_score" id="current_score" value="{{ context.current_score }}">
+<input type="hidden" name="question_index" id="question_index" value="{{ context.question_index }}">
+<input type="hidden" name="attempt" id="attempt" value="{{ context.attempt }}">
+<input type="hidden" name="attempts" id="attempts" value="{{context.attempts}}">
+<button type="submit" class="main-button btn btn-success btn-lg btn-block">Next Question</button>
+
+</form>
+
+{%endblock%}

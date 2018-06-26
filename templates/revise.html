@@ -1,0 +1,56 @@
+{%extends 'base.html'%}
+{%block content%}
+<section class="row text-center">
+    <div class="col-sm-12">
+        <h2 class="padd theFont">What was life like in the Roman Empire?</h2>
+        <p class="theFont">Around 2,000 years ago, the city of Rome was at the centre of a huge empire that 
+        stretched from Scotland to Syria. At the peak of its power, Rome ruled more than 45 million people across Europe, 
+        North Africa and Asia. Its army was the most powerful in the world, and as it conquered more land, 
+        Rome grew from a town into an enormous capital. Ancient Rome was home to gleaming white marble temples, 
+        lavish palaces and spectacular gladiator shows. With over one million people living there, the city was also 
+        a dirty and dangerous place, with a maze of side-streets and slums.</p>
+    </div>
+    <div class="col-sm-12">
+        <h2 class="padd theFont">How did Rome begin?</h2>
+        <p class="theFont"> The Romans had a story about how their city began. 
+        According to legend, Rome was founded by twin brothers, Romulus and Remus, 
+        who were the sons of the god Mars. As babies, the boys were left to drown in the River Tiber by their evil uncle, 
+        but they were rescued by a wolf. When the boys were older, they took revenge on their uncle and killed him.
+        Afterwards, the twins decided to start a new city, but they squabbled about where to build it. 
+        Romulus wanted to build it on the Palatine Hill and Remus preferred the Aventine Hill.
+        To find out who was right, they looked for a sign from the gods. However, they couldn't agree on that either and 
+        both thought the gods were favouring them. One day, the twins got in a fight after Remus made fun of Romulus. 
+        Remus was killed and Romulus named the new city 'Roma' after himself!</p>
+    </div>
+    <div class="col-sm-12">
+        <h2 class="padd theFont">Who ruled Rome?</h2>
+        <p class="theFont"> In the early days, Rome was ruled by kings. Romulus was supposedly the first king. 
+        The last king was Tarquin the Proud. He ruled until 509BC, when the people of Rome drove him out.
+        Rome then became a republic. The republic didn’t allow one person to have complete control of the city. 
+        Instead, a group of men called senators shared power. As the Roman republic grew more powerful, so did its army. 
+        The senators could not always control the army and sometimes they clashed with the generals. In 49BC, Rome’s greatest general 
+        was Julius Caesar. He had complete control of the army, but he wanted to rule Rome like a king again. Some senators didn’t 
+        like this and they killed him in 44BC. But it was too late, Julius Caesar had changed Rome. A few years later, 
+        his adopted son Octavius took power and became the first emperor of Rome. </p>
+    </div>
+    <div class="col-sm-12">
+        <h2 class="padd theFont">How did Rome end?</h2>
+        <p class="theFont"> At the beginning of the 5th century, the Roman Empire was starting to fall apart.
+            It was constantly under attack from tribes from northern Europe. The Romans called these people 'barbarians' 
+            because they thought they were uncivilised. In AD410, a tribe called the Visigoths stormed into the city of Rome. 
+            They destroyed many of the great buildings and killed people as they went. Romulus Augustus, the last Roman Emperor, 
+            lost his power in AD476. He was replaced by a prince from Germany called Odovacar. From then on, the area that was 
+            once the empire was ruled by a collection of kings and princes from outside Italy.</p>
+    </div>
+</section>
+<section class="row text-center">
+    <div class="col-sm-6 offset-sm-3">
+        <p class="theFont"> Think you have enough knowledge to take on the quiz?</p>
+        <div id="greenButton">
+            <a href="{{url_for('index')}}">
+                <p class="text-center theFont">Click to play!</p>
+            </a>
+        </div>
+    </div>
+</section>
+{%endblock%}

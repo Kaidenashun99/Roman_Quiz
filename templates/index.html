@@ -1,72 +1,55 @@
 {% extends 'base.html' %}
 {%block content%}
 <div class="container">
-   <div class="row">
-       <div class="col-sm-12 theFont">
-           <h2>Welcome to the best learning source for Roman Era Revision</h2>
-       </div>
-   </div> 
-   <div class="row">
-       <div class="col-sm-12 theFont text-center">
-           <p>We offer a free learning resource for students, kids and anyone who wants to learn about the Roman Era.
-           Through the use of our revision material and quiz features you are able to learn what life was like in this tremendous era.
-           For best results learn some information in our revision section first and then embark on our quiz!</p>
-       </div>
-   </div>
-   <!--Start of request for users chosen username-->
-   <div class="row">
-       <div class="col-md-1 hidden-sm">
-           <!--Empty for styling purposes-->
-       </div>
-       <div class="col-md-10 col-sm-12">
-           <div class="conatiner containerStyle borderForce">
-               <div class="row">
-                   <div class="col-sm-12">
-                       <p class="theFont text-center" id="usernameIntro">In order to take the quiz and feature in our infamous leaderboard, please chose a username!</p>
-                   </div>
-               </div>
-               <div class="row padd">
-                   <div class="col-sm-6">
-                       <label for="username"><h2 class="theFont">Enter your username:</h2></label>
-                   </div>
-                   <div class="col-sm-6">
-                       <form method="POST">
-                           <input type="text" name="username" id="username">
-                           <input class="btn btn-primary" type="submit" value="Take the quiz!">
-                       </form>
-                   </div>
-               </div>
-           </div>
-       </div>
-       <div class="col-md-1 hidden-sm">
-           <!--Empty for styling purposes-->
-       </div>
-   </div>
-   <div class="row padd">
-       {% with messages = get_flashed_messages() %}
-           {% for message in messages %}
-                <h3 class="theFont text-center">{{ message }}</h3>
-            {% endfor %}
+   
+   <!--Start of username input-->
+   <section class="row text-center">
+       <div class="col-sm-6 offset-sm-3">
+           <h1 class="theFont">Welcome to Roman Era Quiz</h1>
+           <h4 class="theFont padd redText">In order to play enter a username:</h4>
            
-        {% endwith %}
-   </div>
-   <div class="row padd">
-        <div class="col-md-4 col-sm-12 linkButtons">
-            <a href="quiz">
-            <p class="text-center theFont">Take the Quiz</p>
-            </a>
+           <form method="POST"action="/pre_game/">
+               <input id="username" class="form-control" type="text" name="username" placeholder="Enter username (alphanumeric, max 15 characters)..." pattern="^[a-zA-Z0-9]+$" maxlength="15" required/>
+                <button class="main-button btn btn-success btn-lg btn-block">Take the Quiz!</button>
+           </form>
+            
         </div>
+   </section>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   <!--Start of selection buttons-->
+   <div class="row text-center">
+       <div class="col-sm-6 offset-sm-3">
+            <h5 class="theFont">Alternatively, select from the options below:</h5>
+       </div>
+   </div>
+   
+   <div class="row padd">
         
-       <div class="col-md-4 col-sm-12 linkButtons">
-           <p class="text-center theFont">Leaderboard</p>
+       <div class="col-md-6 col-sm-12 linkButtons">
+           <a href="{{url_for('leaderboard')}}">
+               <p class="text-center theFont">Leaderboard</p>
+            </a>
        </div>
     
-       <div class="col-md-4 col-sm-12 linkButtons">
-           <p class="text-center theFont">Revise</p>
+       <div class="col-md-6 col-sm-12 linkButtons">
+           <a href="{{url_for('revise')}}">
+               <p class="text-center theFont">Revise</p>
+            </a>
        </div>
+       
    </div>
-   
-   
+   <!--End of selection buttons-->
+
+
+
 </div>
 
 

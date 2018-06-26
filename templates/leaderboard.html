@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{%block content%}
+<section class="row text-center">
+  <div class="col-sm-6 offset-sm-3">
+    <h2 class="theFont">Leaderboard</h2>
+    <table>
+      <tr>
+          <th class="theFont">User:</th>
+          <th class="theFont">Score:</th>
+      </tr>
+      {% for leaders in leaderboard %}
+      <tr>
+        <td class="theFont userEntry">{{leaders.0}}</td>
+        <td class="theFont userEntry">{{leaders.1}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+  </div>
+</section>
+{%endblock%}
